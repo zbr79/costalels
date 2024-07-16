@@ -9,33 +9,6 @@
         html {
             scroll-behavior: smooth;
         }
-        .hero-section {
-            position: relative;
-            overflow: hidden;
-        }
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-        .slider-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-        .slider-nav button {
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -61,23 +34,9 @@
 
         <main>
             <section id="hero" class="hero-section">
-                <div class="slider">
-                    <div class="slide">
-                        <h2>欢迎来到我们的公司</h2>
-                        <p>创新，品质，卓越</p>
-                    </div>
-                    <div class="slide">
-                        <h2>专业的解决方案</h2>
-                        <p>我们致力于提供最佳服务</p>
-                    </div>
-                    <div class="slide">
-                        <h2>全球覆盖</h2>
-                        <p>我们的仓库遍布全球各地</p>
-                    </div>
-                </div>
-                <div class="slider-nav">
-                    <button id="prev">←</button>
-                    <button id="next">→</button>
+                <div class="container">
+                    <h2>欢迎来到我们的公司</h2>
+                    <p>创新，品质，卓越</p>
                 </div>
             </section>
 
@@ -238,26 +197,6 @@
                         header.classList.remove("scrolled");
                     }
                 });
-
-                // Slider functionality
-                let currentSlide = 0;
-                const slides = document.querySelectorAll(".slide");
-                const totalSlides = slides.length;
-
-                document.getElementById("prev").addEventListener("click", function() {
-                    currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
-                    updateSlider();
-                });
-
-                document.getElementById("next").addEventListener("click", function() {
-                    currentSlide = (currentSlide === totalSlides - 1) ? 0 : currentSlide + 1;
-                    updateSlider();
-                });
-
-                function updateSlider() {
-                    const slider = document.querySelector(".slider");
-                    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-                }
             });
         </script>
     </div>
