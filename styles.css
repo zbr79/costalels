@@ -127,7 +127,7 @@ nav ul li a:hover {
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 300%; /* Adjust width based on the number of slides */
+    width: 300%;
 }
 
 .slide {
@@ -265,10 +265,15 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .container {
         width: 95%;
         padding: 0;
+    }
+
+    header .container nav,
+    header .container .contact-btn {
+        display: none; /* Hide nav and contact button on small screens */
     }
 
     nav ul {
@@ -282,10 +287,6 @@ footer {
         height: auto;
     }
 
-    .contact-btn {
-        margin-top: 1em;
-    }
-
     .footer-container {
         flex-direction: column;
         align-items: center;
@@ -294,13 +295,6 @@ footer {
     .footer-section {
         margin: 1em 0;
     }
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
     .hero-section {
         padding: 2em 0;
@@ -308,23 +302,6 @@ footer {
 
     .section {
         padding: 2em 1em;
-    }
-
-    .slider-nav button {
-        padding: 5px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        height: auto;
-    }
-
-    nav ul li a {
-        padding: 0.5em 0;
     }
 }
 
@@ -340,29 +317,7 @@ footer {
         height: auto;
     }
 
-    .slider-nav button {
-        padding: 5px;
-    }
-
     .section {
         padding: 2em 1em;
-    }
-
-    .contact-btn {
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        height: auto;
-    }
-
-    nav ul li a {
-        padding: 0.5em 0;
     }
 }
