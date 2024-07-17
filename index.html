@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>公司信息网站</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/footer.css">
     <style>
         html {
             scroll-behavior: smooth;
@@ -12,193 +16,23 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <header id="header">
-            <div class="container">
-                <img src="logo.png" alt="公司图标" class="logo">
-                <nav>
-                    <ul>
-                        <li><a href="#hero">首页</a></li>
-                        <li><a href="#about">关于我们</a></li>
-                        <li><a href="#services">服务</a></li>
-                        <li><a href="#global">全球覆盖</a></li>
-                        <li><a href="#solutions">解决方案</a></li>
-                        <li><a href="#statistics">统计数据</a></li>
-                        <li><a href="#news">新闻</a></li>
-                        <li><a href="#testimonials">评价</a></li>
-                    </ul>
-                </nav>
-                <a href="#contact" class="contact-btn">联系我们</a>
-            </div>
-        </header>
+    <div id="header-placeholder"></div>
+    <main>
+        <div id="hero-placeholder"></div>
+        <div id="about-placeholder"></div>
+        <div id="services-placeholder"></div>
+        <div id="global-placeholder"></div>
+        <div id="solutions-placeholder"></div>
+        <div id="statistics-placeholder"></div>
+        <div id="news-placeholder"></div>
+        <div id="testimonials-placeholder"></div>
+        <div id="contact-placeholder"></div>
+    </main>
+    <div id="footer-placeholder"></div>
 
-        <main>
-            <section id="hero" class="hero-section">
-                <div class="container">
-                    <h2>欢迎来到我们的公司</h2>
-                    <p>创新，品质，卓越</p>
-                </div>
-            </section>
+    <a href="#top" id="back-to-top">↑ 返回顶部</a>
 
-            <section id="about" class="section about-section">
-                <div class="container">
-                    <h2>关于我们</h2>
-                    <p>我们致力于提供最佳服务。公司成立于2000年，专注于提供高质量的解决方案。</p>
-                </div>
-            </section>
-
-            <section id="services" class="section services-section">
-                <div class="container">
-                    <h2>我们的服务</h2>
-                    <div class="service">
-                        <h3>咨询服务</h3>
-                        <p>全面的咨询服务，帮助您的企业实现目标并优化运营。</p>
-                    </div>
-                    <div class="service">
-                        <h3>技术支持</h3>
-                        <p>技术支持团队随时准备解决您的技术问题。</p>
-                    </div>
-                    <div class="service">
-                        <h3>项目管理</h3>
-                        <p>专业的项目管理服务，确保您的项目按时完成。</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="global" class="section global-section">
-                <div class="container">
-                    <h2>全球覆盖</h2>
-                    <p>我们的仓库遍布全球各地，确保快速高效的物流服务。</p>
-                </div>
-            </section>
-
-            <section id="solutions" class="section solutions-section">
-                <div class="container">
-                    <h2>行业解决方案</h2>
-                    <p>为各行业提供定制化的物流解决方案，满足不同客户的需求。</p>
-                </div>
-            </section>
-
-            <section id="statistics" class="section statistics-section">
-                <div class="container">
-                    <h2>关键统计数据</h2>
-                    <p>100+ 仓库, 50+ 国家, 1000+ 满意客户</p>
-                </div>
-            </section>
-
-            <section id="news" class="section news-section">
-                <div class="container">
-                    <h2>最新新闻</h2>
-                    <p>查看我们最新的公司和行业新闻。</p>
-                </div>
-            </section>
-
-            <section id="testimonials" class="section testimonials-section">
-                <div class="container">
-                    <h2>客户评价</h2>
-                    <div class="testimonial">
-                        <p>"公司提供了卓越的服务，我们非常满意！"</p>
-                        <p>- 客户A</p>
-                    </div>
-                    <div class="testimonial">
-                        <p>"团队非常专业，项目按时完成。"</p>
-                        <p>- 客户B</p>
-                    </div>
-                    <div class="testimonial">
-                        <p>"技术支持非常出色，解决了我们所有的问题。"</p>
-                        <p>- 客户C</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact" class="section contact-section">
-                <div class="container">
-                    <h2>联系我们</h2>
-                    <p>地址：123 虚拟街道，假城市，国家</p>
-                    <p>电话：+123 456 7890</p>
-                    <p>电子邮件：info@company.com</p>
-                    <form>
-                        <label for="name">姓名:</label>
-                        <input type="text" id="name" name="name" required>
-                        <label for="email">电子邮件:</label>
-                        <input type="email" id="email" name="email" required>
-                        <label for="message">留言:</label>
-                        <textarea id="message" name="message" required></textarea>
-                        <button type="submit">发送</button>
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>公司名称</h3>
-                    <p>我们的使命是提供卓越的服务。</p>
-                </div>
-                <div class="footer-section">
-                    <h3>快速链接</h3>
-                    <ul>
-                        <li><a href="#hero">首页</a></li>
-                        <li><a href="#about">关于我们</a></li>
-                        <li><a href="#services">服务</a></li>
-                        <li><a href="#global">全球覆盖</a></li>
-                        <li><a href="#solutions">解决方案</a></li>
-                        <li><a href="#statistics">统计数据</a></li>
-                        <li><a href="#news">新闻</a></li>
-                        <li><a href="#testimonials">评价</a></li>
-                        <li><a href="#contact">联系我们</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>联系我们</h3>
-                    <p>地址：123 虚拟街道，假城市，国家</p>
-                    <p>电话：+123 456 7890</p>
-                    <p>电子邮件：info@company.com</p>
-                </div>
-                <div class="footer-section">
-                    <h3>关注我们</h3>
-                    <div class="social-icons">
-                        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-                        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 公司名称. 保留所有权利.</p>
-            </div>
-        </footer>
-
-        <a href="#top" id="back-to-top">↑ 返回顶部</a>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const navLinks = document.querySelectorAll("nav ul li a, .contact-btn");
-
-                navLinks.forEach(link => {
-                    link.addEventListener("click", function(event) {
-                        event.preventDefault();
-                        const targetId = this.getAttribute("href").substring(1);
-                        const targetSection = document.getElementById(targetId);
-
-                        window.scrollTo({
-                            top: targetSection.offsetTop - document.querySelector("header").offsetHeight,
-                            behavior: "smooth"
-                        });
-                    });
-                });
-
-                const header = document.querySelector("header");
-                window.addEventListener("scroll", function() {
-                    if (window.scrollY > 0) {
-                        header.classList.add("scrolled");
-                    } else {
-                        header.classList.remove("scrolled");
-                    }
-                });
-            });
-        </script>
-    </div>
+    <script src="js/loadHTML.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>

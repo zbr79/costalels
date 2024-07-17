@@ -1,14 +1,4 @@
-document.addEventListener("scroll", function() {
-    const header = document.getElementById("header");
-    if (window.scrollY > 0) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
+function initializeScrollAndNav() {
     const navLinks = document.querySelectorAll("nav ul li a, .contact-btn");
 
     navLinks.forEach(link => {
@@ -23,4 +13,16 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
-});
+
+    const header = document.querySelector("header");
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 0) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+}
+
+// Ensure the scroll and navigation functionalities are initialized after DOM content is loaded
+document.addEventListener("DOMContentLoaded", initializeScrollAndNav);

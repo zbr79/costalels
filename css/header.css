@@ -1,0 +1,97 @@
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    height: 3em;
+    padding: 0;
+}
+
+header.scrolled {
+    background-color: rgba(74, 159, 244, 0.5);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: 2%;
+    height: 40px;
+}
+
+nav {
+    height: 3em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    height: 100%;
+    padding: 2px;
+}
+
+nav ul li {
+    height: 100%;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+nav ul li a:hover {
+    background-color: #4a9ff4;
+}
+
+.contact-btn {
+    margin-right: 2%;
+    background-color: #ffcc00;
+    color: #003366;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, border-color 0.3s;
+    border: 2px solid transparent;
+}
+
+.contact-btn:hover {
+    background-color: #4a9ff4;
+    color: #fff;
+    border-color: #fff;
+}
