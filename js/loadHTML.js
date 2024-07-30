@@ -1,27 +1,24 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Function to load HTML file into a placeholder
-    function loadHTML(file, placeholder) {
+    function loadHTML(file, elementId, callback) {
         fetch(file)
             .then(response => response.text())
             .then(data => {
-                document.getElementById(placeholder).innerHTML = data;
-                // Re-initialize scroll and navigation functionality after loading new HTML content
-                if (file === 'header.html') {
-                    initializeScrollAndNav();
-                }
+                const element = document.getElementById(elementId);
+                element.insertAdjacentHTML('beforeend', data);
+                if (callback) callback();
             })
             .catch(error => console.log('Error loading HTML file:', error));
     }
 
-    loadHTML('header.html', 'header-placeholder');
-    loadHTML('hero.html', 'hero-placeholder');
-    loadHTML('about.html', 'about-placeholder');
-    loadHTML('services.html', 'services-placeholder');
-    loadHTML('global.html', 'global-placeholder');
-    loadHTML('solutions.html', 'solutions-placeholder');
-    loadHTML('statistics.html', 'statistics-placeholder');
-    loadHTML('news.html', 'news-placeholder');
-    loadHTML('testimonials.html', 'testimonials-placeholder');
-    loadHTML('contact.html', 'contact-placeholder');
-    loadHTML('footer.html', 'footer-placeholder');
+    loadHTML('header.html', 'main-header', initializeScrollAndNav);
+    loadHTML('hero.html', 'main-content');
+    loadHTML('about.html', 'main-content');
+    loadHTML('services.html', 'main-content');
+    loadHTML('global.html', 'main-content');
+    loadHTML('solutions.html', 'main-content');
+    loadHTML('statistics.html', 'main-content');
+    loadHTML('news.html', 'main-content');
+    loadHTML('testimonials.html', 'main-content');
+    loadHTML('contact.html', 'main-content');
+    loadHTML('footer.html', 'main-footer');
 });

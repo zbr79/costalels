@@ -1,37 +1,38 @@
-header {
+#main-header {
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
     transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: transparent;
-    height: 3em;
     padding: 0;
+    /* border:2px solid red; */
+
+    min-height: 3em; /* Set a minimum height for the header */
 }
 
-header.scrolled {
+#main-header.scrolled {
     background-color: rgba(74, 159, 244, 0.5);
 }
 
-header .container {
+.header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    padding: 0 2%;
+    position: relative; /* Added for relative positioning */
 }
 
-.logo {
-    margin-left: 2%;
+.header-logo {
     height: 40px;
 }
 
-nav {
+.header-nav {
     height: 3em;
 }
 
-nav ul {
+.header-nav ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -40,12 +41,13 @@ nav ul {
     padding: 2px;
 }
 
-nav ul li {
+.header-nav ul li {
     height: 100%;
     position: relative;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
-nav ul li a {
+.header-nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -57,7 +59,7 @@ nav ul li a {
     position: relative;
 }
 
-nav ul li a::after {
+.header-nav ul li a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -70,15 +72,15 @@ nav ul li a::after {
     transition: transform 0.3s ease;
 }
 
-nav ul li a:hover::after {
+.header-nav ul li a:hover::after {
     transform: scaleX(1);
 }
 
-nav ul li a:hover {
+.header-nav ul li a:hover {
     background-color: #4a9ff4;
 }
 
-.contact-btn {
+.header-contact-btn {
     margin-right: 2%;
     background-color: #ffcc00;
     color: #003366;
@@ -88,10 +90,75 @@ nav ul li a:hover {
     font-weight: bold;
     transition: background-color 0.3s, border-color 0.3s;
     border: 2px solid transparent;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
-.contact-btn:hover {
+.header-contact-btn:hover {
     background-color: #4a9ff4;
     color: #fff;
     border-color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute; /* Added for absolute positioning */
+    top: 10px; /* Adjust based on your design */
+    left:10px; /* Adjust based on your design */
+}
+
+.mobile-menu {
+    display: none;
+    background-color: rgba(74, 159, 244, 0.9);
+    position: absolute;
+    top: 60px; /* Adjust based on the height of your header */
+    width: 100%;
+    z-index: 999;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu ul li {
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+    .header-nav {
+        display: none;
+    }
+    .header-contact-btn {
+        display: none;
+    }
+    .menu-toggle {
+        position: absolute; /* Added for absolute positioning */
+        top:50%;
+        display: block;
+    }
+    .header-container {
+        justify-content: center;
+
+    }
+    .header-logo {
+        position: absolute; /* Added for absolute positioning */
+        left: 50%; /* Center horizontally */
+        top:50%;
+        transform: translateX(-50%); /* Center horizontally */
+    }
 }
