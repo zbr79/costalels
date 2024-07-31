@@ -16,9 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
     loadHTML('services.html', 'main-content');
     loadHTML('global.html', 'main-content');
     loadHTML('solutions.html', 'main-content');
-    loadHTML('statistics.html', 'main-content');
-    loadHTML('news.html', 'main-content');
-    loadHTML('testimonials.html', 'main-content');
     loadHTML('contact.html', 'main-content');
     loadHTML('footer.html', 'main-footer');
 });
