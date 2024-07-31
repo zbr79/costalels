@@ -7,12 +7,14 @@
     background-color: transparent;
     padding: 0;
     /* border:2px solid red; */
+    transition: background-color 0.3s, backdrop-filter 0.3s; /* Added backdrop-filter transition */
 
     min-height: 3em; /* Set a minimum height for the header */
 }
 
 #main-header.scrolled {
     background-color: rgba(74, 159, 244, 0.5);
+    backdrop-filter: blur(8px); /* Added blur effect */
 }
 
 .header-container {

@@ -19,7 +19,7 @@ function initializeScrollAndNav() {
 
             // Close the mobile menu if it is open
             const mobileMenu = document.getElementById("mobile-menu");
-            if (mobileMenu.style.display === "block") {
+            if (mobileMenu && mobileMenu.style.display === "block") {
                 mobileMenu.style.display = "none";
             }
         } else {
@@ -45,14 +45,22 @@ function initializeScrollAndNav() {
 
     // Add toggle functionality for the mobile menu
     const menuToggle = document.getElementById("menu-toggle");
-    menuToggle.addEventListener("click", function() {
-        const mobileMenu = document.getElementById("mobile-menu");
-        if (mobileMenu.style.display === "block") {
-            mobileMenu.style.display = "none";
-        } else {
-            mobileMenu.style.display = "block";
-        }
-    });
+    if (menuToggle) {
+        menuToggle.addEventListener("click", function() {
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (mobileMenu) {
+                if (mobileMenu.style.display === "block") {
+                    mobileMenu.style.display = "none";
+                } else {
+                    mobileMenu.style.display = "block";
+                }
+            } else {
+                console.error("Mobile menu not found");
+            }
+        });
+    } else {
+        console.error("Menu toggle button not found");
+    }
 
     // Initial scroll state check
     handleScroll();
