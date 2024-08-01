@@ -1,33 +1,18 @@
-#main-header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: background-color 0.3s;
-    background-color: transparent;
-    padding: 0;
-    /* border:2px solid red; */
-    transition: background-color 0.3s, backdrop-filter 0.3s; /* Added backdrop-filter transition */
-
-    min-height: 3em; /* Set a minimum height for the header */
-}
-
-#main-header.scrolled {
-    background-color: rgba(74, 159, 244, 0.5);
-    backdrop-filter: blur(8px); /* Added blur effect */
-}
-
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height:3em;
     width: 100%;
     padding: 0 2%;
     position: relative; /* Added for relative positioning */
+    /* border:2px blue solid; */
+    background-color: red;
 }
 
 .header-logo {
     height: 40px;
+    border:3px green solid;
 }
 
 .header-nav {
@@ -108,13 +93,15 @@
     border: none;
     color: white;
     cursor: pointer;
-    position: absolute; /* Added for absolute positioning */
-    top: 50%; /* Adjust based on your design */
-    left:3%; /* Adjust based on your design */
-    /* border:white solid 2px; */
+    position: absolute; 
+    left:3%; 
+    border:white solid 2px;
+    min-height:100%;
 }
 .menu-toggle.open {
-    font-size: 3em; /* Increase the font size for the "X" icon */
+    font-size: 3.5em; /* Increase the font size for the "X" icon */
+    align-self: center;
+    justify-self: center;
 }
 
 .mobile-menu {
@@ -164,7 +151,6 @@
     .header-logo {
         position: absolute; /* Added for absolute positioning */
         left: 50%; /* Center horizontally */
-        top:50%;
         transform: translateX(-50%); /* Center horizontally */
     }
 }

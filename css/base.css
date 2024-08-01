@@ -14,3 +14,24 @@ html {
     width: 100%;
     margin: 0 auto;
 }
+
+
+#main-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    background-color: transparent;
+    padding: 0;
+    /* border:2px solid red; */
+    transition: background-color 0.3s, backdrop-filter 0.3s; /* Added backdrop-filter transition */
+
+    min-height: 3em; /* Set a minimum height for the header */
+    /* border:2px red solid; */
+}
+
+#main-header.scrolled {
+    background-color: rgba(74, 159, 244, 0.5);
+    backdrop-filter: blur(8px); /* Added blur effect */
+}
