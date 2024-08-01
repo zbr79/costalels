@@ -32,7 +32,8 @@ html {
     background-color: transparent;
     padding: 0;
     /* border:2px solid red; */
-    transition: background-color 0.3s, backdrop-filter 0.3s; /* Added backdrop-filter transition */
+    transition-property: background-color, backdrop-filter;
+    transition-duration: 0.3s, 0.3s;
 
     min-height: 3em; /* Set a minimum height for the header */
     /* border:2px red solid; */
@@ -40,5 +41,5 @@ html {
 
 #main-header.scrolled {
     background-color: rgba(74, 159, 244, 0.5);
-    backdrop-filter: blur(8px); /* Added blur effect */
+    backdrop-filter: blur(8000000000000000000px); /* Added blur effect */
 }
