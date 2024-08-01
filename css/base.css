@@ -32,10 +32,9 @@ html {
     min-height: 3em; /* Set a minimum height for the header */
     /* border:2px red solid; */
 
-    -webkit-backface-visibility: hidden;
 }
 
 #main-header.scrolled {
     background-color: rgba(74, 159, 244, 0.5);
-    backdrop-filter: blur(8px); /* Added blur effect */
+    backdrop-filter: blur(8px); 
 }

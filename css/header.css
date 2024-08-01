@@ -158,6 +158,11 @@
         justify-content: center;
 
     }
+    
+    #main-header.scrolled {
+    background-color: rgba(74, 159, 244, 0.8);
+    backdrop-filter: blur(8px); 
+    }
     .header-logo {
         position: absolute; /* Added for absolute positioning */
         left: 50%; /* Center horizontally */
