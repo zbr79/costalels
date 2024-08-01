@@ -7,7 +7,7 @@
     padding: 0 2%;
     position: relative; /* Added for relative positioning */
     /* border:2px blue solid; */
-    background-color: red;
+    /* background-color: red; */
 }
 
 .header-logo {
@@ -100,11 +100,11 @@
     align-items: center;
 
 
-    border:white solid 2px;
+    /* border:white solid 2px; */
 }
 
 .menu-toggle img{
-    height:100%;
+    height:70%;
     /* width: 100%; */
     width: auto;
     /* border:white solid 2px; */
