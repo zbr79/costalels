@@ -6,7 +6,6 @@ function initializeScrollAndNav() {
     const mobileMenu = document.getElementById("mobile-menu");
     const menuIcon = document.getElementById("menu-icon");
 
-
     if (!header) {
         console.error("Header not found");
         return;
@@ -37,7 +36,7 @@ function initializeScrollAndNav() {
             // Close the mobile menu if it is open
             if (mobileMenu.style.display === "block") {
                 mobileMenu.style.display = "none";
-                menuToggle.innerHTML = "&#9776;"; // Change back to hamburger icon
+                menuIcon.src = "pic/menu.png"; // Change back to hamburger icon
                 menuToggle.classList.remove("open"); // Remove the open class
             }
         } else {
@@ -65,11 +64,11 @@ function initializeScrollAndNav() {
     menuToggle.addEventListener("click", function() {
         if (mobileMenu.style.display === "block") {
             mobileMenu.style.display = "none";
-            menuIcon.src = "pic/menu.png";
+            menuIcon.src = "pic/menu.png"; // Change back to hamburger icon
             menuToggle.classList.remove("open"); // Remove the open class
         } else {
             mobileMenu.style.display = "block";
-            menuIcon.src = "pic/close.png";
+            menuIcon.src = "pic/close.png"; // Change to "X" icon
             menuToggle.classList.add("open"); // Add the open class
         }
     });
