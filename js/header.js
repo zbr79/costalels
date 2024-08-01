@@ -4,6 +4,8 @@ function initializeScrollAndNav() {
     const header = document.getElementById("main-header");
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+
 
     if (!header) {
         console.error("Header not found");
@@ -63,11 +65,11 @@ function initializeScrollAndNav() {
     menuToggle.addEventListener("click", function() {
         if (mobileMenu.style.display === "block") {
             mobileMenu.style.display = "none";
-            menuToggle.innerHTML = "&#9776;"; // Change back to hamburger icon
+            menuIcon.src = "pic/menu.png";
             menuToggle.classList.remove("open"); // Remove the open class
         } else {
             mobileMenu.style.display = "block";
-            menuToggle.innerHTML = "&times;"; // Change to "X" icon
+            menuIcon.src = "pic/close.png";
             menuToggle.classList.add("open"); // Add the open class
         }
     });

@@ -88,24 +88,29 @@
 
 .menu-toggle {
     display: none;
-    font-size: 2em;
     background: none;
     border:none;
     position: absolute; 
     left:3%; 
 
     height:100%;
-    width:10%;
+    width:4em;
     justify-content: center;
     align-items: center;
 
 
     border:white solid 2px;
 }
-.menu-toggle.open {
-    font-size: 3em; /* Increase the font size for the "X" icon */
 
+.menu-toggle img{
+    height:100%;
+    width: 100%;
+    /* border:white solid 2px; */
 }
+    
+
+
+
 
 .mobile-menu {
     display: none;
