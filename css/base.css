@@ -10,12 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.overall-container {
-    width: 100%;
-    height:100%;
-    border: 5px blue solids;
-}
-
 
 .container {
     width: 100%;
