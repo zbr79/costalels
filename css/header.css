@@ -112,14 +112,19 @@
     top: 10px; /* Adjust based on your design */
     left:10px; /* Adjust based on your design */
 }
+.menu-toggle.open {
+    font-size: 3em; /* Increase the font size for the "X" icon */
+}
 
 .mobile-menu {
     display: none;
-    background-color: rgba(74, 159, 244, 0.9);
+    background-color: #003366;
     position: absolute;
-    top: 60px; /* Adjust based on the height of your header */
-    width: 100%;
+    top:3em;
+    width: 40%;
     z-index: 999;
+    border-top-right-radius: 15px; /* Add rounded bottom left corner */
+    border-bottom-right-radius: 15px;
 }
 
 .mobile-menu ul {
@@ -138,7 +143,7 @@
     text-decoration: none;
     display: block;
     padding: 1em;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
 }
 
 @media (max-width: 768px) {

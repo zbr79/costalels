@@ -1,7 +1,22 @@
+document.addEventListener("DOMContentLoaded", initializeScrollAndNav);
+
 function initializeScrollAndNav() {
     const header = document.getElementById("main-header");
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
     if (!header) {
         console.error("Header not found");
+        return;
+    }
+
+    if (!menuToggle) {
+        console.error("Menu toggle button not found");
+        return;
+    }
+
+    if (!mobileMenu) {
+        console.error("Mobile menu not found");
         return;
     }
 
@@ -18,9 +33,10 @@ function initializeScrollAndNav() {
             });
 
             // Close the mobile menu if it is open
-            const mobileMenu = document.getElementById("mobile-menu");
-            if (mobileMenu && mobileMenu.style.display === "block") {
+            if (mobileMenu.style.display === "block") {
                 mobileMenu.style.display = "none";
+                menuToggle.innerHTML = "&#9776;"; // Change back to hamburger icon
+                menuToggle.classList.remove("open"); // Remove the open class
             }
         } else {
             console.error("Target section not found for link:", targetId);
@@ -44,27 +60,18 @@ function initializeScrollAndNav() {
     window.addEventListener("scroll", handleScroll);
 
     // Add toggle functionality for the mobile menu
-    const menuToggle = document.getElementById("menu-toggle");
-    if (menuToggle) {
-        menuToggle.addEventListener("click", function() {
-            const mobileMenu = document.getElementById("mobile-menu");
-            if (mobileMenu) {
-                if (mobileMenu.style.display === "block") {
-                    mobileMenu.style.display = "none";
-                } else {
-                    mobileMenu.style.display = "block";
-                }
-            } else {
-                console.error("Mobile menu not found");
-            }
-        });
-    } else {
-        console.error("Menu toggle button not found");
-    }
+    menuToggle.addEventListener("click", function() {
+        if (mobileMenu.style.display === "block") {
+            mobileMenu.style.display = "none";
+            menuToggle.innerHTML = "&#9776;"; // Change back to hamburger icon
+            menuToggle.classList.remove("open"); // Remove the open class
+        } else {
+            mobileMenu.style.display = "block";
+            menuToggle.innerHTML = "&times;"; // Change to "X" icon
+            menuToggle.classList.add("open"); // Add the open class
+        }
+    });
 
     // Initial scroll state check
     handleScroll();
 }
-
-// Ensure the scroll and navigation functionalities are initialized after DOM content is loaded
-document.addEventListener("DOMContentLoaded", initializeScrollAndNav);
