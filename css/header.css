@@ -100,7 +100,7 @@
     align-items: center;
 
 
-    /* border:white solid 2px; */
+    border:white solid 2px;
 }
 .menu-toggle.open {
     font-size: 3em; /* Increase the font size for the "X" icon */
