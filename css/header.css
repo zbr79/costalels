@@ -109,8 +109,9 @@
     color: white;
     cursor: pointer;
     position: absolute; /* Added for absolute positioning */
-    top: 10px; /* Adjust based on your design */
-    left:10px; /* Adjust based on your design */
+    top: 50%; /* Adjust based on your design */
+    left:3%; /* Adjust based on your design */
+    /* border:white solid 2px; */
 }
 .menu-toggle.open {
     font-size: 3em; /* Increase the font size for the "X" icon */
@@ -154,8 +155,6 @@
         display: none;
     }
     .menu-toggle {
-        position: absolute; /* Added for absolute positioning */
-        top:50%;
         display: block;
     }
     .header-container {
