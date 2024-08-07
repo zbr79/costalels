@@ -8,7 +8,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
     overflow: hidden; /* Ensure rounded corners are applied to children */
     width: 100%; /* Ensure the card takes full width of the container */
-    padding:20px;
+    padding:20.1px;
 }
 
 .service-image {
