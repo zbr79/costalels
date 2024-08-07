@@ -8,7 +8,7 @@ body {
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    /* overflow-x: hidden; THIS FIXES OVERFLOW X HIDDEN DOESNT WORK ON PHONE BUT REMOVES HEADERS ABILITY TO SCROILL*/ 
 }
 
 
