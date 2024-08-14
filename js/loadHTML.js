@@ -16,10 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     loadHTML('header.html', 'main-header', initializeScrollAndNav);
     loadHTML('hero.html', 'hero');
-    loadHTML('about.html', 'about');
+    loadHTML('about.html', 'about-section');
     loadHTML('services.html', 'services');
-    loadHTML('global.html', 'global');
-    loadHTML('solutions.html', 'solutions');
+    // loadHTML('solutions.html', 'solutions');
     loadHTML('contact.html', 'contact');
     loadHTML('footer.html', 'main-footer');
 });

@@ -1,25 +1,33 @@
-.header-container {
+.header{
     display: flex;
+    height:3em;
+    /* width: 100%; */
+    padding: 0 2%;
+
+
+
     align-items: center;
     justify-content: space-between;
-    min-height:3em;
-    width: 100%;
-    padding: 0 2%;
-    position: relative; /* Added for relative positioning */
-    /* border:2px blue solid; */
-    /* background-color: red; */
+    
+
+    position: relative; 
+    /* border:solid 3px blue; */
+
+    /* background-color: gray; */
+
+
 }
 
 .header-logo {
     height: 40px;
-    /* border:3px green solid; */
 }
 
-.header-nav {
-    height: 3em;
+.desktop-menu {
+
+    /* border:2px solid red; */
 }
 
-.header-nav ul {
+.desktop-menu ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -28,25 +36,25 @@
     padding: 2px;
 }
 
-.header-nav ul li {
+.desktop-menu ul li {
     height: 100%;
     position: relative;
     white-space: nowrap; /* Prevent text from wrapping */
 }
 
-.header-nav ul li a {
-    color: #fff;
+.desktop-menu ul li a {
+    color: black;
+    font-size:1.5em;
     text-decoration: none;
     font-weight: bold;
     padding: 0 1em;
     display: flex;
     align-items: center;
     height: 100%;
-    transition: background-color 0.3s;
     position: relative;
 }
 
-.header-nav ul li a::after {
+.desktop-menu ul li a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -59,32 +67,14 @@
     transition: transform 0.3s ease;
 }
 
-.header-nav ul li a:hover::after {
+.desktop-menu ul li a:hover::after {
     transform: scaleX(1);
 }
 
-.header-nav ul li a:hover {
-    background-color: #4a9ff4;
+.desktop-menu ul li a:hover {
+    background-color: darkgray;
 }
 
-.header-contact-btn {
-    margin-right: 2%;
-    background-color: #ffcc00;
-    color: #003366;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s, border-color 0.3s;
-    border: 2px solid transparent;
-    white-space: nowrap; /* Prevent text from wrapping */
-}
-
-.header-contact-btn:hover {
-    background-color: #4a9ff4;
-    color: #fff;
-    border-color: #fff;
-}
 
 .menu-toggle {
     padding: 0;
@@ -145,10 +135,7 @@
 }
 
 @media (max-width: 768px) {
-    .header-nav {
-        display: none;
-    }
-    .header-contact-btn {
+    .desktop-menu {
         display: none;
     }
     .menu-toggle {
