@@ -1,0 +1,79 @@
+/* Contact Section Styles */
+.contact-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    font-size: 2em;
+    color: #1b4aa1;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    text-align: center;
+}
+
+.contact-icon {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.contact-icon img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-method h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-method p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-method {
+        width: 150px;
+    }
+    .contact-icon {
+        width: 120px;
+        height: 120px;
+    }
+    .contact-method h3 {
+        font-size: 1em;
+    }
+    .contact-method p {
+        font-size: 0.8em;
+    }
+}
