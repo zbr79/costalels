@@ -24,10 +24,10 @@
 
 .about-info-section {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .about-image {
@@ -56,6 +56,7 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .card {
@@ -79,44 +80,39 @@
     text-align: left;
 }
 
-/* Responsive Design for Screens Less Than 768px Wide */
+/* Responsive Design to Keep the Same UI */
 @media (max-width: 768px) {
     .about {
         padding: 20px;
         text-align: center;
     }
 
-    .about-info-section {
-        flex-direction: column;
-        align-items: center;
+    .about-info-section, .card-section {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: nowrap; /* Ensure elements do not stack */
     }
 
-    .about-image {
-        max-width: 100%;
-        margin-bottom: 20px;
+    .about-image, .card {
+        flex: 1;
+        margin: 10px;
+        max-width: 300px; /* Maintain the same size as on the large screen */
     }
 
     .about-right-section {
-        width: 100%;
-        margin: 0;
-    }
-
-    .card-section {
-        flex-direction: column;
-        align-items: center;
+        width: auto; /* Ensure the section does not resize unnecessarily */
     }
 
     .card {
-        width: 100%;
-        margin: 10px 0;
+        margin: 0 10px;
     }
 
     #main-heading {
-        font-size: 2em;
+        font-size: 2.5em; /* Keep the same heading size */
     }
 
     #sub-heading {
-        font-size: 0.9em;
-        margin-bottom: -30px;
+        font-size: 1em;
+        margin-bottom: -40px;
     }
 }
