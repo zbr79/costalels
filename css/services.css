@@ -56,7 +56,6 @@
     margin-bottom: 20px;
 }
 
-
 .service-card:hover {
     background-color: #044c99; /* Blue background */
     color: #fff; /* White text color */
@@ -69,3 +68,12 @@
 .service-card:hover .service-button {
     color: #fff; /* White text color */
 }
+
+/* Responsive Design: Two cards per line on small screens */
+@media (max-width: 767px) {
+    .service-card {
+        flex: 1 1 calc(40% - 20px); /* Two cards per line on small screens */
+        /* background-color: red; */
+    }
+}
+
